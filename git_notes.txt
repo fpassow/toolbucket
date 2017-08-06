@@ -49,12 +49,18 @@ git reset
     Undo all your git add's
     
 git reset --hard
-    Throw away everything since your last commit
+    Throw away all actual changes since your last commit
     
-git reset --soft
+git checkout <branch>
+    Changes all the file in you work area to the head of the given branch.
     
-
-TODO: push, pull, merge, fetch, reset, remote, checkout, log
+TODO: "Three main uses for checkout" ??
+   "You can check out a branch OR a commit" ??
+    HEAD can point to a branch or a commit. If it points to a commit, it is "detached"
+       from any branch.
+       
+       SO I MUST BE ABLE TO USE checkout WITH A COMMIT.????
+TODO: push, pull, merge, fetch, remote, checkout, log
 
 
 
