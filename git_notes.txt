@@ -4,19 +4,30 @@ GIT NOTES
 GOAL
 Stay simple. But include enought commands and concepts for normal tasks without being a cookbook.
 
+A "commit" is what's stored when you do a commit. 
+"Head" is the c
+
 THINGS A REPO KNOWS
 All its old versions
 What's staged (the "index")
 ???User
 ???Where it came from
 
-.git/info/exclude
-   Files and patterns to exclude
+YOU ARE ALWAYS ON A BRANCH. EVERY COMMIT IS ON A BRANCH. 
+A BRANCH CALLED "master" IS CREATED AUTOMATICALLY
 
+HELP
+git help <whatever>
+    Example: "git help init" gives help on "git init"
+
+GET INFO ABOUT STATE OF THE WORKING AREA
+git status
 
 SETUP
 git config [--global] user.name=...
 git config [--global] user.email=...
+git config --list
+    List all config settings.
 
 MAKE A NEW REPO HERE, WITH CURRENT FILES
 git init
@@ -24,20 +35,33 @@ git init
 
 CREATE A NEW REPO BY COPYING
 git clone <url_or_path>
-    Makes a new subdir for the clone
+    Copies (an entire(!)) repo, and makes a new subdir for the clone.
  
 NEW CONTENT / CURRENT REPO
-git add ...
-    Stages things for the next commit
+git add <files_expr>
+git add --all
+    Stages things for the next commit.
     
 git commit -m "A_commit_message"
     Commits everythign staged
     
-TELL ME ABOUT THE STATE OF THIS REPO AND FILES IN THIS DIR
-git status
+git reset
+    Undo all your git add's
+    
+git reset --hard
+    Throw away everything since your last commit
+    
+git reset --soft
+    
 
-TODO: push, pull, merge, fetch, reset, remote, checkout
+TODO: push, pull, merge, fetch, reset, remote, checkout, log
+
+
 
 EXERCISE: git init  in an empty dir. Looks at everything in .git dir. Do stuff. Look at changes in .git dir
 
 .
+.git/info/exclude
+   Files and patterns to exclude, ie ignore. What's the difference between this and .gitignore?
+   .gitignore files work more like .htaccess. And they are part of the version-controlled content.
+   .git/info/exclude is local only and never gets checked in and then checked out by someone else.
