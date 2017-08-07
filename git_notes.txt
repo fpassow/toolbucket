@@ -50,6 +50,7 @@ git reset
     
 git reset --hard
     Throw away all actual changes since your last commit
+    But only affects files that are at least added.
     
 git checkout <branch>
     Changes all the file in you work area to the head of the given branch.
