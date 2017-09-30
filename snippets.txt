@@ -1,4 +1,8 @@
-START OF HTML5 PAGE
+ONE-LINERS AND VERY SHORT PROGRAMS
+==================================
+
+HTML5
+--------------------------
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +10,12 @@ START OF HTML5 PAGE
 
 
 WEB SERVER WITH ROOT IN CURRENT DIR
+-----------------------------------
 python -m SimpleHTTPServer  [port]
 
 
 GIVEN ONE THING PER LINE ON STDIN, FIND AND COUNT UNIQUE THINGS
------count_unique.py---------------------
+---------------------------------------------------------------
 import sys
 counts = {}
 for line in sys.stdin:
@@ -22,8 +27,8 @@ for key in counts:
     print key, ',', counts[key]
     
 
-//node.js to listen on a port and dump
-//what it's sent to the console.
+NODE.JS TO LISTEN ON A PORT AND DUMP EVERYTHING TO STDOUT
+--------------------------------------------------------------
 net = require('net');
 net.createServer(function (socket) {
   socket.on('data', function (data) {
