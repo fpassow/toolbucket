@@ -1,3 +1,9 @@
+START OF HTML5 PAGE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
 
 WEB SERVER WITH ROOT IN CURRENT DIR
 python -m SimpleHTTPServer  [port]
