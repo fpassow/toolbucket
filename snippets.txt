@@ -1,0 +1,16 @@
+WEB SERVER WITH ROOT IN CURRENT DIR
+python -m SimpleHTTPServer  [port]
+
+GIVEN ONE THING PER LINE ON STDIN, FIND AND COUNT UNIQUE THINGS
+-----count_unique.py---------------------
+import sys
+counts = {}
+for line in sys.stdin:
+    word = line.strip()
+    if word not in counts:
+        counts[word] = 0
+    counts[word] = counts[word] + 1
+for key in counts:
+    print key, ',', counts[key]
+    
+    
