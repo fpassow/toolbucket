@@ -1,5 +1,7 @@
+
 WEB SERVER WITH ROOT IN CURRENT DIR
 python -m SimpleHTTPServer  [port]
+
 
 GIVEN ONE THING PER LINE ON STDIN, FIND AND COUNT UNIQUE THINGS
 -----count_unique.py---------------------
@@ -12,5 +14,19 @@ for line in sys.stdin:
     counts[word] = counts[word] + 1
 for key in counts:
     print key, ',', counts[key]
+    
+
+//node.js to listen on a port and dump
+//what it's sent to the console.
+net = require('net');
+net.createServer(function (socket) {
+  socket.on('data', function (data) {
+    console.log(data.toString());
+  });
+}).listen(5000);
+console.log("Listening on port 5000\n");
+
+    
+    
     
     
