@@ -14,7 +14,7 @@ WEB SERVER WITH ROOT IN CURRENT DIR
 python -m SimpleHTTPServer  [port]
 
 
-GIVEN ONE THING PER LINE ON STDIN, FIND AND COUNT UNIQUE THINGS
+GIVEN ONE THING PER LINE ON STDIN, FIND AND COUNT UNIQUE THINGS (python)
 ---------------------------------------------------------------
 import sys
 counts = {}
@@ -27,7 +27,7 @@ for key in counts:
     print key, ',', counts[key]
     
 
-NODE.JS TO LISTEN ON A PORT AND DUMP EVERYTHING TO STDOUT
+LISTEN ON A PORT AND DUMP EVERYTHING TO STDOUT (node)
 --------------------------------------------------------------
 net = require('net');
 net.createServer(function (socket) {
