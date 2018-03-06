@@ -10,5 +10,9 @@ npm install --save-dev babel-core babel-cli babel-preset-es2015
 npm install --save-dev babel-plugin-transform-react-jsx
 #Add jsx plugin to "babel" script in package.json
   babel --presets es2015 --plugins transform-react-jsx src -d build
+  
+#Grab React's js and add itto the html file, and a react script will work.
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
 
 #TODO: "Via .babelrc (Recommended)" AT https://babeljs.io/docs/plugins/transform-react-jsx/
