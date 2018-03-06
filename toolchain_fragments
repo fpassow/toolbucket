@@ -1,6 +1,7 @@
 #All the modern JS stuff from Babel
 npm init
-npm install --save-dev babel-cli babel-preset-env
-babel src -d build --presets=es2015 ???????????????????????????????
+npm install --save-dev babel-cli babel-preset-es2015
+#IN package.json
+    babel src -d build --presets=es2015
 
 -D copies other file types to the dest directory (--copy-files)
