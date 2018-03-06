@@ -1,6 +1,6 @@
 #All the modern JS stuff from Babel
 npm init
-npm install --save-dev babel-cli babel-preset-es2015
+npm install --save-dev babel-core babel-cli babel-preset-es2015
 #IN package.json
     babel src -d build --presets=es2015
 
