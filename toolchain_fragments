@@ -1,7 +1,14 @@
 #All the modern JS stuff from Babel
 npm init
 npm install --save-dev babel-core babel-cli babel-preset-es2015
-#IN package.json
+#IN package.json add "babel" script
     babel src -d build --presets=es2015
 
 -D copies other file types to the dest directory (--copy-files)
+
+#Adding JSX
+npm install --save-dev babel-plugin-transform-react-jsx
+#Add jsx plugin to "babel" script in package.json
+  babel --presets es2015 --plugins transform-react-jsx src -d build
+
+#TODO: "Via .babelrc (Recommended)" AT https://babeljs.io/docs/plugins/transform-react-jsx/
