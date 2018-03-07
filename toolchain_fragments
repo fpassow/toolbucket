@@ -16,3 +16,10 @@ npm install --save-dev babel-plugin-transform-react-jsx
 <script src="react-dom.development.js"></script>
 
 #TODO: "Via .babelrc (Recommended)" AT https://babeljs.io/docs/plugins/transform-react-jsx/
+
+#WEBPACK
+npm init
+npm install --save-dev webpack webpack-cli
+#webpack.config.js:
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
