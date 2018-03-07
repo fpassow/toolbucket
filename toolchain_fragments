@@ -20,6 +20,29 @@ npm install --save-dev babel-plugin-transform-react-jsx
 #WEBPACK
 npm init
 npm install --save-dev webpack webpack-cli
+
 #webpack.config.js:
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##################
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/
+      }
+    ]
+  }
+};
+#####end of webpack config################
+
+#set script in package.json to run "webpack"
+# No explicit Babel required. Yet is still converts ES6!!! :-)   
+
 
