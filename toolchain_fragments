@@ -46,3 +46,20 @@ module.exports = {
 # No explicit Babel required. Yet is still converts ES6!!! :-)   
 
 
+#Adding React...
+npm install --save react
+npm install --save react-dom
+# Note: Not save-dev.
+
+npm install --save-dev babel-core
+npm install --save-dev babel-preset-es2015
+npm install --save-dev babel-preset-react
+npm install --save-dev babel-loader
+
+#Add to the rules for .js in webpack.config.js:
+        use: {
+          loader: "babel-loader"
+        }
+
+# DO I NEED?  "Via .babelrc (Recommended)" AT https://babeljs.io/docs/plugins/transform-react-jsx/
+
