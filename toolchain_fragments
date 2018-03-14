@@ -11,7 +11,7 @@ npm install --save-dev babel-plugin-transform-react-jsx
 #Add jsx plugin to "babel" script in package.json
   babel --presets es2015 --plugins transform-react-jsx src -d build
   
-#Grab React's js and add itto the html file, and a react script will work.
+#Grab React's js and add it to the html file, and a react script will work.
 <script src="react.development.js"></script>
 <script src="react-dom.development.js"></script>
 
@@ -46,7 +46,9 @@ module.exports = {
 # No explicit Babel required. Yet is still converts ES6!!! :-)   
 
 
-#Adding React...
+#Adding React... COMPLETE, MINIMAL REACT BUILD SETUP.
+#####################################################
+npm init
 npm install --save react
 npm install --save react-dom
 # Note: Not save-dev.
@@ -55,11 +57,34 @@ npm install --save-dev babel-core
 npm install --save-dev babel-preset-es2015
 npm install --save-dev babel-preset-react
 npm install --save-dev babel-loader
+npm install --save-dev webpack webpack-cli
 
-#Add to the rules for .js in webpack.config.js:
+#Add to package.json "scripts":
+    "build": "webpack"
+    
+#Create .babelrc:
+{
+    "presets": ["es2015", "react"],
+    "plugins": []
+}
+
+#Create webpack.config.js:
+const path = require('path');
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
         use: {
           loader: "babel-loader"
         }
-
-# DO I NEED?  "Via .babelrc (Recommended)" AT https://babeljs.io/docs/plugins/transform-react-jsx/
-
+      }
+    ]
+  }
+};
