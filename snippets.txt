@@ -11,6 +11,21 @@ HTML5
     <title>FOOOOOO</title>
     <link rel="stylesheet" type="text/css" href="css/FOOOOO.css">
     
+    
+CSS
+---
+html {
+        /* For easy, accessible reading */
+        line-height: 1.5;
+        /* defines "rem" unit */
+        font-size: 18px; 
+        font-family: sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 React Form
 -----------------------------
